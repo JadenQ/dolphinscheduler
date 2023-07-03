@@ -57,7 +57,6 @@ public class TaskStateEventHandler implements StateEventHandler {
 
         Set<Long> completeTaskSet = workflowExecuteRunnable.getCompleteTaskCodes();
 
-        
         // Handle timeout fail task situation
         if (task.getState().isFailure()
                 && (taskStateEvent.getStatus() != null && taskStateEvent.getStatus().isRunning())) {
